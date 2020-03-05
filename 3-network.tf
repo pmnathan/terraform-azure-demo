@@ -35,6 +35,14 @@ resource "azurerm_subnet" "subnet2" {
   address_prefix       = "10.0.2.0/24"
 }
 
+resource "azurerm_subnet" "subnet4" {
+  name                 = "subnet4"
+  resource_group_name  = azurerm_resource_group.example.name
+  virtual_network_name = azurerm_virtual_network.example.name
+  address_prefix       = "10.0.4.0/24"
+}
+
+
 resource "azurerm_subnet" "subnet3" {
   name                 = "subnet3"
   resource_group_name  = azurerm_resource_group.example.name
